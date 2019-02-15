@@ -1,21 +1,32 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-parent</artifactId>
+    <version>2.1.2.RELEASE</version>
+  </parent>
+
   <groupId>com.myjava</groupId>
-  <artifactId>all</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <artifactId>demo-all</artifactId>
+  <version>${revision}</version>
   <packaging>pom</packaging>
 
   <modules>
+    <module>parent</module>
   </modules>
 
+  <properties>
+    <revision>0.0.1-SNAPSHOT</revision>
+  </properties>
+
   <name>all</name>
-  <url>https://github.com/HWliao/myjs/wiki</url>
+  <url>https://github.com/HWliao/myjava/wiki</url>
   <description>top myjava demo pom.xml file</description>
   <licenses>
     <license>
       <name>MIT</name>
-      <url>https://github.com/HWliao/myjs/blob/master/LICENSE</url>
+      <url>https://github.com/HWliao/myjava/blob/master/LICENSE</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
@@ -29,12 +40,12 @@
 
   <issueManagement>
     <system>github</system>
-    <url>https://github.com/HWliao/myjs/issues</url>
+    <url>https://github.com/HWliao/myjava/issues</url>
   </issueManagement>
 
   <scm>
-    <url>git@github.com:HWliao/myjs.git</url>
-    <connection>scm:git@github.com:HWliao/myjs.git</connection>
-    <developerConnection>scm:git@github.com:HWliao/myjs.git</developerConnection>
+    <url>git@github.com:HWliao/myjava.git</url>
+    <connection>scm:git@github.com:HWliao/myjava.git</connection>
+    <developerConnection>scm:git@github.com:HWliao/myjava.git</developerConnection>
   </scm>
 </project>
