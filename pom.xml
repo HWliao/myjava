@@ -20,7 +20,7 @@
     <revision>0.0.1-SNAPSHOT</revision>
   </properties>
 
-  <name>all</name>
+  <name>demo-all</name>
   <url>https://github.com/HWliao/myjava/wiki</url>
   <description>top myjava demo pom.xml file</description>
   <licenses>
