@@ -14,12 +14,37 @@
   <name>demo-parent</name>
   <description>demo modules parent pom.xml file</description>
 
+  <properties>
+    <guava.version>27.0.1-jre</guava.version>
+    <common.lang.version>3.8.1</common.lang.version>
+    <fastjson.version>1.2.56</fastjson.version>
+  </properties>
+
   <dependencyManagement>
     <dependencies>
+      <!-- demo 核心库 -->
       <dependency>
         <groupId>com.myjava</groupId>
         <artifactId>core</artifactId>
         <version>${revision}</version>
+      </dependency>
+      <!-- guava -->
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>${guava.version}</version>
+      </dependency>
+      <!-- common lang -->
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>${common.lang.version}</version>
+      </dependency>
+      <!-- fastjson -->
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>${fastjson.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

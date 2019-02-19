@@ -1,0 +1,11 @@
+# 天眼查配置
+tyc:
+  # 根据信用代码组织机构代码获取公司信息接口
+  i736:
+    id:     736
+    name:   根据信用代码组织机构代码获取公司信息
+    descr:  根据信用代码组织机构代码/组织机构代码/注册号获取公司信息
+    url:    http://open.api.tianyancha.com/services/v4/open/getCompanyByCode
+    token:  97740505-087e-4494-a001-85a4e10a5685
+    method: GET
+
