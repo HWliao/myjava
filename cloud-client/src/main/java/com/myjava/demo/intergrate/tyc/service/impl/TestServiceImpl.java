@@ -17,8 +17,4 @@ public class TestServiceImpl {
   @Autowired
   private TianyanchaProperties tianyanchaProperties;
 
-  @PostConstruct
-  public void init() {
-    System.out.println(JSON.toJSONString(this.tianyanchaProperties));
-  }
 }
