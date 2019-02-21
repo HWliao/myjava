@@ -16,6 +16,7 @@
     <module>parent</module>
     <module>core</module>
     <module>intergrate</module>
+    <module>client-api</module>
   </modules>
 
   <properties>

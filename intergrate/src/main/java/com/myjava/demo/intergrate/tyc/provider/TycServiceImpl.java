@@ -1,4 +1,4 @@
-package com.myjava.demo.intergrate.provider;
+package com.myjava.demo.intergrate.tyc.provider;
 
 import com.jjshome.kp.api.service.institution.IInstitutionService;
 import com.myjava.demo.intergrate.tyc.service.ITycService;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
  * @author lhw
  * @date 2019/2/21
  */
-@Service
+@Service("iTycService")
 public class TycServiceImpl implements ITycService {
   private Logger logger = LoggerFactory.getLogger(this.getClass());
 

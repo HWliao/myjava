@@ -29,6 +29,12 @@
         <artifactId>core</artifactId>
         <version>${revision}</version>
       </dependency>
+      <!-- remote client api -->
+      <dependency>
+        <groupId>com.myjava</groupId>
+        <artifactId>client-api</artifactId>
+        <version>${revision}</version>
+      </dependency>
       <!-- guava -->
       <dependency>
         <groupId>com.google.guava</groupId>
@@ -52,6 +58,24 @@
         <groupId>com.alibaba</groupId>
         <artifactId>dubbo</artifactId>
         <version>${dubbo.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+          </exclusion>
+        </exclusions>
       </dependency>
     </dependencies>
   </dependencyManagement>
