@@ -1,3 +1,7 @@
+# spring common
+spring:
+  application:
+    name: demo-intergrate
 # 天眼查配置
 tyc:
   # 根据信用代码组织机构代码获取公司信息接口
@@ -8,4 +12,15 @@ tyc:
     url:    http://open.api.tianyancha.com/services/v4/open/getCompanyByCode
     token:  97740505-087e-4494-a001-85a4e10a5685
     method: GET
-
+# dubbo
+dubbo:
+  scan:
+    base-packages: com.myjava.demo.intergrate.provider
+  protocol:
+    name: dubbo
+    port: 20881
+    serialization: dubbo
+  registry:
+    address: 172.16.4.114:2181
+    protocol: zookeeper
+debug: false
