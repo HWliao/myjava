@@ -10,7 +10,7 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>intergreate</artifactId>
+  <artifactId>intergrate</artifactId>
   <name>demo-intergrate</name>
   <description>Demo project for Spring Boot - intergate third part cloud service.</description>
 
