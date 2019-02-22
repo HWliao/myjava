@@ -12,7 +12,6 @@ import org.springframework.context.annotation.ImportResource;
  * @date 2019/2/19
  */
 @Configuration
-@ImportResource("classpath*:/spring-dubbo.xml")
 @EnableConfigurationProperties(TianyanchaProperties.class)
 public class ApplicationConfiguration {
 }

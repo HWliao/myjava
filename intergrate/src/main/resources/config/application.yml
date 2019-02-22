@@ -2,6 +2,22 @@
 spring:
   application:
     name: demo-intergrate
+# dubbo
+dubbo:
+  application:
+    name: ${spring.application.name}
+    organization: jjs
+    owner: demo-intergrate
+  registry:
+    protocol: zookeeper
+    address: 172.16.4.114:2181
+  protocol:
+    name: dubbo
+    serialization: hessian2
+    accesslog: dubbo.accesslog
+    port: 20881
+  scan:
+    base-packages: com.myjava.demo.intergrate.tyc.provider
 # 天眼查配置
 tyc:
   # 根据信用代码组织机构代码获取公司信息接口
@@ -12,8 +28,5 @@ tyc:
     url:    http://open.api.tianyancha.com/services/v4/open/getCompanyByCode
     token:  97740505-087e-4494-a001-85a4e10a5685
     method: GET
-# zookeeper
-zookeeper:
-  register:
-    address: 172.16.4.114:2181
 debug: false
+

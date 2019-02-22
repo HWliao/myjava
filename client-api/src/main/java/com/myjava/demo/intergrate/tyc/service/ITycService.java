@@ -7,4 +7,11 @@ package com.myjava.demo.intergrate.tyc.service;
  * @date 2019/2/21
  */
 public interface ITycService {
+  /**
+   * 返回hello
+   *
+   * @param name 名字
+   * @return hello
+   */
+  public String sayHello(String name);
 }
