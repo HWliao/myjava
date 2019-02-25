@@ -52,20 +52,6 @@
       <optional>true</optional>
     </dependency>
     <dependency>
-      <groupId>org.apache.dubbo</groupId>
-      <artifactId>dubbo-spring-boot-starter</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.dubbo</groupId>
-      <artifactId>dubbo</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.curator</groupId>
-      <artifactId>curator-recipes</artifactId>
-    </dependency>
-
-
-    <dependency>
       <groupId>com.jjshome.kp</groupId>
       <artifactId>jjs_kp_client</artifactId>
       <version>1.7.1</version>

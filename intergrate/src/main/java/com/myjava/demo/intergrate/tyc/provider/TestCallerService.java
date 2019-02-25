@@ -1,7 +1,6 @@
 package com.myjava.demo.intergrate.tyc.provider;
 
 import com.jjshome.kp.api.service.institution.IInstitutionService;
-import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -12,7 +11,6 @@ import javax.annotation.PostConstruct;
  */
 @Service
 public class TestCallerService {
-  @Reference(group = "lhw")
   private IInstitutionService iInstitutionService;
 
   @PostConstruct
