@@ -17,6 +17,7 @@
     <module>core</module>
     <module>intergrate</module>
     <module>client-api</module>
+    <module>dubbox-spring-boot-starter</module>
   </modules>
 
   <properties>

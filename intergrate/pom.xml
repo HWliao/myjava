@@ -34,6 +34,10 @@
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-logging</artifactId>
     </dependency>
     <dependency>
@@ -51,6 +55,12 @@
       <artifactId>spring-boot-configuration-processor</artifactId>
       <optional>true</optional>
     </dependency>
+
+    <dependency>
+      <groupId>com.myjava</groupId>
+      <artifactId>dubbox-spring-boot-starter</artifactId>
+    </dependency>
+
     <dependency>
       <groupId>com.jjshome.kp</groupId>
       <artifactId>jjs_kp_client</artifactId>
