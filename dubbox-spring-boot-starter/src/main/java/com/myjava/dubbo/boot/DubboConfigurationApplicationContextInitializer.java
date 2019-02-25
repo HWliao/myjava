@@ -6,12 +6,14 @@ import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.Environment;
 
+import javax.annotation.Nonnull;
+
 /**
  * @author lhw
  */
 public class DubboConfigurationApplicationContextInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
 
-  public void initialize(ConfigurableApplicationContext applicationContext) {
+  public void initialize(@Nonnull ConfigurableApplicationContext applicationContext) {
     Environment env = applicationContext.getEnvironment();
     String scan = env.getProperty("dubbox.scan");
     if (scan != null) {
