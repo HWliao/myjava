@@ -1,5 +1,7 @@
 package com.myjava.demo.intergrate.tyc.service;
 
+import com.myjava.demo.intergrate.tyc.model.Company;
+
 /**
  * 天眼查对外服务
  *
@@ -8,10 +10,10 @@ package com.myjava.demo.intergrate.tyc.service;
  */
 public interface ITycService {
   /**
-   * 返回hello
+   * 根据信用代码组织机构代码/组织机构代码/注册号获取公司信息
    *
-   * @param name 名字
-   * @return hello
+   * @param code 公司统一信用代码
+   * @return 公司信息
    */
-  public String sayHello(String name);
+  public Company getCompanyByCode(String code);
 }
