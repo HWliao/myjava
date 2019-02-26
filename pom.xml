@@ -22,6 +22,7 @@
 
   <properties>
     <revision>1.1.0</revision>
+    <java.version>8</java.version>
   </properties>
 
   <name>demo-all</name>
@@ -106,6 +107,14 @@
             </goals>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
       </plugin>
     </plugins>
   </build>

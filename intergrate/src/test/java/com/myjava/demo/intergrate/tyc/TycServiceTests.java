@@ -24,8 +24,8 @@ public class TycServiceTests {
 
   @Test
   public void getCompanyByCodeTest() {
-    String code = "91110000802100433B";
-    Company company = this.iTycService.getCompanyByCode("91110000802100433B");
+    String code = "91110000802100433Blhw";
+    Company company = this.iTycService.getCompanyByCode("91110000802100433Blhw");
     Assertions.assertThat(company)
       .isNotNull()
       .hasFieldOrPropertyWithValue("creditCode", code);
