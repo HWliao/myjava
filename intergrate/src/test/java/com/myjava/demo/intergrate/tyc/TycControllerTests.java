@@ -34,7 +34,7 @@ public class TycControllerTests {
   public void getCompanyByCode() throws Exception {
     String code = "91110000802100433Blhw";
     given(this.iTycService.getCompanyByCode(code)).willReturn(new Company());
-    this.mockMvc.perform(get("/demo/intergrate/tyc/company/{1}", code).accept(MediaType.APPLICATION_JSON_UTF8))
+    this.mockMvc.perform(get("/intergrate/tyc/company/{1}", code).accept(MediaType.APPLICATION_JSON_UTF8))
       .andExpect(status().isOk())
       .andExpect(content().json("{}"));
   }

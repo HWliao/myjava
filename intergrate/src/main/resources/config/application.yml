@@ -1,3 +1,9 @@
+debug: false
+# server common
+server:
+  port: 8088
+  servlet:
+    context-path: /demo
 # spring common
 spring:
   application:
@@ -27,5 +33,5 @@ tyc:
     url:    http://open.api.tianyancha.com/services/v4/open/getCompanyByCode
     token:  97740505-087e-4494-a001-85a4e10a5685
     method: GET
-debug: false
+
 

@@ -1,6 +1,7 @@
 package com.myjava.demo.intergrate.tyc.model;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -19,7 +20,7 @@ public class Holder implements Serializable {
   /**
    * 金额
    */
-  private Long amount;
+  private BigDecimal amount;
   /**
    * 对应表id
    */
@@ -43,14 +44,6 @@ public class Holder implements Serializable {
 
   public void setToco(Long toco) {
     this.toco = toco;
-  }
-
-  public Long getAmount() {
-    return amount;
-  }
-
-  public void setAmount(Long amount) {
-    this.amount = amount;
   }
 
   public Long getId() {

@@ -1,6 +1,7 @@
 package com.myjava.demo.intergrate.tyc.model;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -14,11 +15,11 @@ public class Company implements Serializable {
   /**
    * 更新时间
    */
-  private Long updatetime;
+  private Date updatetime;
   /**
    * 经营开始时间
    */
-  private Long fromTime;
+  private Date fromTime;
   /**
    * 法人类型，1 人 2 公司
    */
@@ -62,7 +63,7 @@ public class Company implements Serializable {
   /**
    * 核准时间
    */
-  private Long approvedTime;
+  private Date approvedTime;
   /**
    * 公司logo
    */
@@ -98,7 +99,7 @@ public class Company implements Serializable {
   /**
    * 成立日期
    */
-  private Long estiblishTime;
+  private Date estiblishTime;
   /**
    * 法人
    */
@@ -106,7 +107,7 @@ public class Company implements Serializable {
   /**
    * 经营结束时间
    */
-  private Long toTime;
+  private Date toTime;
   /**
    * 法人id
    */
@@ -135,7 +136,7 @@ public class Company implements Serializable {
   /**
    * 更新时间
    */
-  private Long updateTimes;
+  private Date updateTimes;
   private Integer companyType;
   /**
    * 社会统一信用代码
@@ -149,22 +150,6 @@ public class Company implements Serializable {
    * 股东列表
    */
   private List<Holder> holderlist;
-
-  public Long getUpdatetime() {
-    return updatetime;
-  }
-
-  public void setUpdatetime(Long updatetime) {
-    this.updatetime = updatetime;
-  }
-
-  public Long getFromTime() {
-    return fromTime;
-  }
-
-  public void setFromTime(Long fromTime) {
-    this.fromTime = fromTime;
-  }
 
   public Integer getType() {
     return type;
@@ -246,14 +231,6 @@ public class Company implements Serializable {
     this.industry = industry;
   }
 
-  public Long getApprovedTime() {
-    return approvedTime;
-  }
-
-  public void setApprovedTime(Long approvedTime) {
-    this.approvedTime = approvedTime;
-  }
-
   public String getLogo() {
     return logo;
   }
@@ -318,28 +295,12 @@ public class Company implements Serializable {
     this.regStatus = regStatus;
   }
 
-  public Long getEstiblishTime() {
-    return estiblishTime;
-  }
-
-  public void setEstiblishTime(Long estiblishTime) {
-    this.estiblishTime = estiblishTime;
-  }
-
   public String getLegalPersonName() {
     return legalPersonName;
   }
 
   public void setLegalPersonName(String legalPersonName) {
     this.legalPersonName = legalPersonName;
-  }
-
-  public Long getToTime() {
-    return toTime;
-  }
-
-  public void setToTime(Long toTime) {
-    this.toTime = toTime;
   }
 
   public Long getLegalPersonId() {
@@ -398,14 +359,6 @@ public class Company implements Serializable {
     this.base = base;
   }
 
-  public Long getUpdateTimes() {
-    return updateTimes;
-  }
-
-  public void setUpdateTimes(Long updateTimes) {
-    this.updateTimes = updateTimes;
-  }
-
   public Integer getCompanyType() {
     return companyType;
   }
@@ -436,5 +389,53 @@ public class Company implements Serializable {
 
   public void setHolderlist(List<Holder> holderlist) {
     this.holderlist = holderlist;
+  }
+
+  public Date getUpdatetime() {
+    return updatetime;
+  }
+
+  public void setUpdatetime(Date updatetime) {
+    this.updatetime = updatetime;
+  }
+
+  public Date getFromTime() {
+    return fromTime;
+  }
+
+  public void setFromTime(Date fromTime) {
+    this.fromTime = fromTime;
+  }
+
+  public Date getApprovedTime() {
+    return approvedTime;
+  }
+
+  public void setApprovedTime(Date approvedTime) {
+    this.approvedTime = approvedTime;
+  }
+
+  public Date getEstiblishTime() {
+    return estiblishTime;
+  }
+
+  public void setEstiblishTime(Date estiblishTime) {
+    this.estiblishTime = estiblishTime;
+  }
+
+  public Date getToTime() {
+    return toTime;
+  }
+
+  public void setToTime(Date toTime) {
+    this.toTime = toTime;
+  }
+
+  public Date getUpdateTimes() {
+    return updateTimes;
+  }
+
+  public void setUpdateTimes(Date updateTimes) {
+    this.updateTimes = updateTimes;
   }
 }

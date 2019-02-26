@@ -19,7 +19,7 @@ public class TycContoller {
   @Autowired
   private ITycService iTycService;
 
-  @RequestMapping("/demo/intergrate/tyc/company/{code}")
+  @RequestMapping("/intergrate/tyc/company/{code}")
   public Company getCompanyByCode(@PathVariable String code) {
     return this.iTycService.getCompanyByCode(code);
   }
