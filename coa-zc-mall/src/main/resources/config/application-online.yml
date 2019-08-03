@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    # mysql tiger_erp
+    erp:
+      url: jdbc:mysql://172.16.4.230:33096/tiger_erp?autoReconnect=true&useUnicode=true&characterEncoding=UTF8&noAccessToProcedureBodies=true&zeroDateTimeBehavior=convertToNull
+      username: root
+      password: passwd3_31
+
+# dubbox 详细配置参考dubbox配置
+dubbox:
+  registry:
+    address: 172.16.4.114:2181
+
+# 项目配置
+coa:
+  session:
+    redis:
+      host: 172.16.4.112
+      port: 6379
+      database: 0
+  aicp:
+    req-path: http://172.16.3.100
+logging:
+  level:
+    root: warn
+    com.leyoujia.coa.zc.mall.dao: warn

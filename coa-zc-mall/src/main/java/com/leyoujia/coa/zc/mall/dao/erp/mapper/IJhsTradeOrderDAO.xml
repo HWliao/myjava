@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.leyoujia.coa.zc.mall.dao.erp.IJhsTradeOrderDAO">
+
+  <select id="countAlreadyPurchasedGf" resultType="java.lang.Integer">
+    SELECT
+      count(*)
+    FROM
+      JHS_COMMODITY C,
+      JHS_TRADE_ORDER T
+    WHERE
+      C.ID = T.COMMODITY_ID
+      AND T.WORKER_ID = #{buyerId}
+      AND T.TYPE != 4
+      AND T.STATUS != -1
+      AND T.STATUS != 99
+      AND T.STATUS != 33
+      AND T.CREATE_DATE > '${date}'
+      AND C.CATEGORY_ID IN
+      <foreach collection="categroyIds" item="categroyId" open="(" separator="," close=")">
+        #{categroyId}
+      </foreach>
+  </select>
+  <select id="countPendingOrderByCommodityId" resultType="java.lang.Long">
+    SELECT IFNULL(SUM(COUNT),0) FROM JHS_TRADE_ORDER WHERE
+    `STATUS` IN
+    <foreach collection="statuses" item="status" open="(" separator="," close=")">
+      #{status}
+    </foreach>
+    AND COMMODITY_ID = #{commodityId}
+    <if test="dictText != null and dictText != ''">
+      AND DICTTEXT = #{dictText}
+    </if>
+    AND DATA_VERSION = #{version}
+  </select>
+</mapper>

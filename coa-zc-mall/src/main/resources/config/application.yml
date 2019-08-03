@@ -1,0 +1,87 @@
+server:
+  port: 8101
+  servlet:
+    context-path: /coa/zc/mall
+    session:
+      cookie:
+        path: /
+spring:
+  application:
+    name: coa-zc-mall
+  datasource:
+    # mysql tiger_erp
+    erp:
+      url: jdbc:mysql://172.16.4.230:33096/tiger_erp?autoReconnect=true&useUnicode=true&characterEncoding=UTF8&noAccessToProcedureBodies=true&zeroDateTimeBehavior=convertToNull
+      username: root
+      password: passwd3_31
+      druid:
+        connection-properties: config.decrypt=false
+        max-active: 50
+        initial-size: 1
+        max-wait: 60000
+        min-idle: 1
+        time-between-eviction-runs-millis: 60000
+        min-evictable-idle-time-millis: 60000
+        test-while-idle: true
+        test-on-borrow: false
+        test-on-return: false
+        max-pool-prepared-statement-per-connection-size: 20
+  # freemarker
+  freemarker:
+    expose-request-attributes: true
+    expose-session-attributes: true
+    expose-spring-macro-helpers: true
+    settings:
+      template_update_delay: 10
+      locale: zh_CN
+      datetime_format: yyyy-MM-dd HH:mm:ss
+      date_format: yyyy-MM-dd
+      number_format: #.##
+
+# dubbox 详细配置参考dubbox配置
+dubbox:
+  scan: com.leyoujia.coa.zc.mall
+  application:
+    name: ${spring.application.name}
+    organization: leyoujia.com
+    owner: ${spring.application.name}
+  registry:
+    protocol: zookeeper
+    address: 172.16.4.114:2181
+  protocol:
+    name: dubbo
+    serialization: dubbo
+    port: 20890
+
+# 项目配置
+coa:
+  session:
+    redis:
+      host: 172.16.4.112
+      port: 6379
+      database: 0
+  aicp:
+    req-path: http://172.16.3.100
+    req-main-method: /coa/zc/mall/aicp
+    package-path: com.leyoujia.coa.zc.mall.app_api
+    service-code: ${spring.application.name}
+    service-name: 乐有家商城
+  zc:
+    mall:
+      login:
+        whitelist:
+          - /coa/zc/mall/
+          - /coa/zc/mall/index
+          - /coa/zc/mall/index.html
+          - /coa/zc/mall/aicp
+          - /coa/zc/mall/error
+          - /coa/zc/mall/404
+          - /coa/zc/mall/500
+          - /coa/zc/mall/401
+          - /coa/zc/mall/403
+logging:
+  level:
+    root: info
+    com.leyoujia.coa.zc.mall.dao: info
+    com.leyoujia.coa.zc.mall.MallApplication: info
+    org.springframework.boot.web.embedded.tomcat.TomcatWebServer: info

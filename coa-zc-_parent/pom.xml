@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <groupId>com.leyoujia.coa.zc</groupId>
+    <artifactId>coa-zc</artifactId>
+    <version>${revision}</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>coa-zc-_parent</artifactId>
+  <packaging>pom</packaging>
+  <description>资产线 - 父级模块,负责依赖管理</description>
+
+  <properties>
+    <guava.version>27.0.1-jre</guava.version>
+    <common.lang.version>3.8.1</common.lang.version>
+    <common.collection.version>4.1</common.collection.version>
+    <fastjson.version>1.2.56</fastjson.version>
+    <dubbox.starter.version>1.2.0</dubbox.starter.version>
+    <javassist.version>3.21.0-GA</javassist.version>
+    <spring.boot.version>2.1.6.RELEASE</spring.boot.version>
+    <spring.cloud.version>Greenwich.SR1</spring.cloud.version>
+    <mybatis.version>2.1.0</mybatis.version>
+    <mybatis.dynamic.sql>1.1.2</mybatis.dynamic.sql>
+    <mybatis.generator>1.3.7</mybatis.generator>
+    <mysql.driver>8.0.16</mysql.driver>
+    <sqlserver.driver>6.4.0.jre8</sqlserver.driver>
+    <druid.version>1.1.17</druid.version>
+    <oasys.version>0.0.4</oasys.version>
+    <coaservice.aicp.version>1.3.2</coaservice.aicp.version>
+    <coaservice.param.version>1.0.3</coaservice.param.version>
+    <coaservice.payment.version>1.1.2</coaservice.payment.version>
+    <jjs.version>1.7.2</jjs.version>
+    <nhr.version>1.3.8</nhr.version>
+    <nhr.platform.version>1.0.6</nhr.platform.version>
+    <jredis.version>2.10.2</jredis.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- spring boot -->
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${spring.boot.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!-- spring cloud -->
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring.cloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!-- coa zc先关 -->
+      <dependency>
+        <groupId>com.leyoujia.coa.zc</groupId>
+        <artifactId>coa-zc-client</artifactId>
+        <version>${revision}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.leyoujia.coa.zc</groupId>
+        <artifactId>coa-zc-common</artifactId>
+        <version>${revision}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.leyoujia.coa.zc</groupId>
+        <artifactId>coa-zc-core</artifactId>
+        <version>${revision}</version>
+      </dependency>
+      <!-- spring boot starter -->
+      <!-- log4j2 -->
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <version>${spring.boot.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter</artifactId>
+        <version>${spring.boot.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <!-- guava -->
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>${guava.version}</version>
+      </dependency>
+      <!-- common lang -->
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>${common.lang.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-collections4</artifactId>
+        <version>${common.collection.version}</version>
+      </dependency>
+      <!-- fastjson -->
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>${fastjson.version}</version>
+      </dependency>
+      <!-- dubbox starter -->
+      <dependency>
+        <groupId>com.leyoujia.coa.zc</groupId>
+        <artifactId>dubbox-spring-boot-starter</artifactId>
+        <version>${dubbox.starter.version}</version>
+      </dependency>
+      <!-- mybatis -->
+      <dependency>
+        <groupId>org.mybatis.spring.boot</groupId>
+        <artifactId>mybatis-spring-boot-starter</artifactId>
+        <version>${mybatis.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.mybatis.dynamic-sql</groupId>
+        <artifactId>mybatis-dynamic-sql</artifactId>
+        <version>${mybatis.dynamic.sql}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>druid-spring-boot-starter</artifactId>
+        <version>${druid.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-jdbc</artifactId>
+        <exclusions>
+          <exclusion>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+      <dependency>
+        <groupId>redis.clients</groupId>
+        <artifactId>jedis</artifactId>
+        <version>${jredis.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.jjshome.oasys</groupId>
+        <artifactId>jjs_oasys_utils</artifactId>
+        <version>${oasys.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.jjshome.coaservice</groupId>
+        <artifactId>coaservice-aicp</artifactId>
+        <version>${coaservice.aicp.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.jjshome</groupId>
+        <artifactId>jjs</artifactId>
+        <version>${jjs.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.jjshome.cloudoa</groupId>
+        <artifactId>nhr-api-client</artifactId>
+        <version>${nhr.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.leyoujia.platform</groupId>
+        <artifactId>hr-mds</artifactId>
+        <version>${nhr.platform.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>com.jjshome.coaservice</groupId>
+        <artifactId>coaservice-param</artifactId>
+        <version>${coaservice.param.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.jjshome.coaservice</groupId>
+        <artifactId>coaservice-payment</artifactId>
+        <version>${coaservice.payment.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <version>1.6.0</version>
+          <executions>
+            <!-- 初始化先运行npm install -->
+            <execution>
+              <id>npm install (initialize)</id>
+              <goals>
+                <goal>exec</goal>
+              </goals>
+              <phase>initialize</phase>
+              <configuration>
+                <executable>npm</executable>
+                <arguments>
+                  <argument>install</argument>
+                </arguments>
+              </configuration>
+            </execution>
+            <!-- 编译代码时,运行npm build -->
+            <execution>
+              <id>npm run build (compile)</id>
+              <goals>
+                <goal>exec</goal>
+              </goals>
+              <phase>compile</phase>
+              <configuration>
+                <executable>npm</executable>
+                <arguments>
+                  <argument>run</argument>
+                  <argument>build</argument>
+                </arguments>
+              </configuration>
+            </execution>
+            <!-- 测试 暂时不可用-->
+            <!--<execution>-->
+            <!--<id>npm run test (test)</id>-->
+            <!--<goals>-->
+            <!--<goal>exec</goal>-->
+            <!--</goals>-->
+            <!--<phase>test</phase>-->
+            <!--<configuration>-->
+            <!--<executable>npm</executable>-->
+            <!--<arguments>-->
+            <!--<argument>run</argument>-->
+            <!--<argument>test</argument>-->
+            <!--</arguments>-->
+            <!--</configuration>-->
+            <!--</execution>-->
+          </executions>
+
+          <configuration>
+            <environmentVariables>
+              <!-- The following parameters create an NPM sandbox for CI -->
+              <!--<NPM_CONFIG_PREFIX>${basedir}/npm</NPM_CONFIG_PREFIX>-->
+              <!--<NPM_CONFIG_CACHE>${NPM_CONFIG_PREFIX}/cache</NPM_CONFIG_CACHE>-->
+              <!--<NPM_CONFIG_TMP>${project.build.directory}/npmtmp</NPM_CONFIG_TMP>-->
+            </environmentVariables>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.mybatis.generator</groupId>
+          <artifactId>mybatis-generator-maven-plugin</artifactId>
+          <version>${mybatis.generator}</version>
+          <configuration>
+            <includeCompileDependencies>true</includeCompileDependencies>
+            <overwrite>true</overwrite>
+          </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>mysql</groupId>
+              <artifactId>mysql-connector-java</artifactId>
+              <version>${mysql.driver}</version>
+            </dependency>
+            <dependency>
+              <groupId>com.microsoft.sqlserver</groupId>
+              <artifactId>mssql-jdbc</artifactId>
+              <version>${sqlserver.driver}</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+</project>

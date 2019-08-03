@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>coa-zc-_parent</artifactId>
+    <groupId>com.leyoujia.coa.zc</groupId>
+    <version>${revision}</version>
+    <relativePath>../coa-zc-_parent/pom.xml</relativePath>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>coa-zc-mall</artifactId>
+  <packaging>jar</packaging>
+  <description>资产线 - 聚划算/乐划算/商城 包含前端项目/后台项目/外部服务</description>
+
+  <dependencies>
+    <!-- spring -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-log4j2</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-freemarker</artifactId>
+    </dependency>
+    <!-- redis -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-redis</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-pool2</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>redis.clients</groupId>
+      <artifactId>jedis</artifactId>
+    </dependency>
+    <!-- coa -->
+    <dependency>
+      <groupId>com.leyoujia.coa.zc</groupId>
+      <artifactId>coa-zc-client</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.leyoujia.coa.zc</groupId>
+      <artifactId>coa-zc-common</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.leyoujia.coa.zc</groupId>
+      <artifactId>coa-zc-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.jjshome.coaservice</groupId>
+      <artifactId>coaservice-aicp</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.jjshome.coaservice</groupId>
+      <artifactId>coaservice-param</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.jjshome.coaservice</groupId>
+      <artifactId>coaservice-payment</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.leyoujia.platform</groupId>
+      <artifactId>hr-mds</artifactId>
+    </dependency>
+    <!-- dubbox starter -->
+    <dependency>
+      <groupId>com.leyoujia.coa.zc</groupId>
+      <artifactId>dubbox-spring-boot-starter</artifactId>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <mainClass>com.leyoujia.coa.zc.mall.MallApplication</mainClass>
+          <executable>true</executable>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.mybatis.generator</groupId>
+        <artifactId>mybatis-generator-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+</project>
