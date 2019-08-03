@@ -18,36 +18,20 @@
     <!-- spring -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-log4j2</artifactId>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+      <optional>true</optional>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-configuration-processor</artifactId>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-freemarker</artifactId>
-    </dependency>
-    <!-- redis -->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-data-redis</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-pool2</artifactId>
-    </dependency>
 
     <dependency>
-      <groupId>redis.clients</groupId>
-      <artifactId>jedis</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-log4j2</artifactId>
     </dependency>
+
     <!-- coa -->
     <dependency>
       <groupId>com.leyoujia.coa.zc</groupId>
@@ -61,27 +45,6 @@
       <groupId>com.leyoujia.coa.zc</groupId>
       <artifactId>coa-zc-core</artifactId>
     </dependency>
-    <dependency>
-      <groupId>com.jjshome.coaservice</groupId>
-      <artifactId>coaservice-aicp</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.jjshome.coaservice</groupId>
-      <artifactId>coaservice-param</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.jjshome.coaservice</groupId>
-      <artifactId>coaservice-payment</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.leyoujia.platform</groupId>
-      <artifactId>hr-mds</artifactId>
-    </dependency>
-    <!-- dubbox starter -->
-    <dependency>
-      <groupId>com.leyoujia.coa.zc</groupId>
-      <artifactId>dubbox-spring-boot-starter</artifactId>
-    </dependency>
   </dependencies>
   <build>
     <plugins>
@@ -90,15 +53,7 @@
         <artifactId>spring-boot-maven-plugin</artifactId>
         <configuration>
           <mainClass>com.leyoujia.coa.zc.mall.MallApplication</mainClass>
-          <executable>true</executable>
         </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>repackage</goal>
-            </goals>
-          </execution>
-        </executions>
       </plugin>
       <plugin>
         <groupId>org.mybatis.generator</groupId>

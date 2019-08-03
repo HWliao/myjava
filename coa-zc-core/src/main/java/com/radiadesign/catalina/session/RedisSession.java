@@ -1,8 +1,9 @@
 package com.radiadesign.catalina.session;
 
-import java.security.Principal;
 import org.apache.catalina.Manager;
 import org.apache.catalina.session.StandardSession;
+
+import java.security.Principal;
 import java.util.HashMap;
 
 

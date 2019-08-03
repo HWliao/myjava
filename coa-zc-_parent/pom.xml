@@ -56,22 +56,6 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-      <!-- coa zc先关 -->
-      <dependency>
-        <groupId>com.leyoujia.coa.zc</groupId>
-        <artifactId>coa-zc-client</artifactId>
-        <version>${revision}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.leyoujia.coa.zc</groupId>
-        <artifactId>coa-zc-common</artifactId>
-        <version>${revision}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.leyoujia.coa.zc</groupId>
-        <artifactId>coa-zc-core</artifactId>
-        <version>${revision}</version>
-      </dependency>
       <!-- spring boot starter -->
       <!-- log4j2 -->
       <dependency>
@@ -119,12 +103,6 @@
         <artifactId>fastjson</artifactId>
         <version>${fastjson.version}</version>
       </dependency>
-      <!-- dubbox starter -->
-      <dependency>
-        <groupId>com.leyoujia.coa.zc</groupId>
-        <artifactId>dubbox-spring-boot-starter</artifactId>
-        <version>${dubbox.starter.version}</version>
-      </dependency>
       <!-- mybatis -->
       <dependency>
         <groupId>org.mybatis.spring.boot</groupId>
@@ -156,6 +134,22 @@
         <groupId>redis.clients</groupId>
         <artifactId>jedis</artifactId>
         <version>${jredis.version}</version>
+      </dependency>
+      <!-- coa zc先关 -->
+      <dependency>
+        <groupId>com.leyoujia.coa.zc</groupId>
+        <artifactId>coa-zc-client</artifactId>
+        <version>${revision}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.leyoujia.coa.zc</groupId>
+        <artifactId>coa-zc-common</artifactId>
+        <version>${revision}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.leyoujia.coa.zc</groupId>
+        <artifactId>coa-zc-core</artifactId>
+        <version>${revision}</version>
       </dependency>
 
       <dependency>
@@ -293,6 +287,20 @@
               <version>${sqlserver.driver}</version>
             </dependency>
           </dependencies>
+        </plugin>
+        <plugin>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-maven-plugin</artifactId>
+          <configuration>
+            <executable>true</executable>
+          </configuration>
+          <executions>
+            <execution>
+              <goals>
+                <goal>repackage</goal>
+              </goals>
+            </execution>
+          </executions>
         </plugin>
       </plugins>
     </pluginManagement>

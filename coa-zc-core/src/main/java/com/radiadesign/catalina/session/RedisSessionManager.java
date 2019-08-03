@@ -2,19 +2,17 @@ package com.radiadesign.catalina.session;
 
 import org.apache.catalina.*;
 import org.apache.catalina.session.ManagerBase;
-
+import org.apache.juli.logging.Log;
+import org.apache.juli.logging.LogFactory;
+import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
-import redis.clients.jedis.Jedis;
 import redis.clients.jedis.Protocol;
 
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.Set;
-
-import org.apache.juli.logging.Log;
-import org.apache.juli.logging.LogFactory;
 
 
 public class RedisSessionManager extends ManagerBase implements Lifecycle {
