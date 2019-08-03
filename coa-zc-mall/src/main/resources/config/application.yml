@@ -18,7 +18,7 @@ coa:
       host: 172.16.4.112
       port: 6379
       database: 0
-
+# log 配置
 logging:
   level:
     root: info
