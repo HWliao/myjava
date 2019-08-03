@@ -54,6 +54,21 @@
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 
+    <!-- jjs/coaservice/leyoujia-->
+    <dependency>
+      <groupId>com.jjshome</groupId>
+      <artifactId>jjs</artifactId>
+    </dependency>
+
+    <!-- common -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-collections4</artifactId>
+    </dependency>
 
   </dependencies>
 
