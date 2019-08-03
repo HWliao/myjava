@@ -1,10 +1,7 @@
 package com.leyoujia.coa.zc.mall;
 
-import org.apache.logging.log4j.core.lookup.MainMapLookup;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.lang.management.RuntimeMXBean;
 
 /**
  * @author lhw

@@ -14,11 +14,15 @@
   <packaging>jar</packaging>
   <description>资产线 - 各个模块通用工具类,异常类,常量类</description>
 
-
   <dependencies>
     <dependency>
       <groupId>com.leyoujia.coa.zc</groupId>
       <artifactId>coa-zc-client</artifactId>
+    </dependency>
+    <!-- log -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
     </dependency>
     <!-- guava -->
     <dependency>
@@ -39,17 +43,19 @@
       <groupId>com.alibaba</groupId>
       <artifactId>fastjson</artifactId>
     </dependency>
+
+    <!-- 以下为部分框架/技术/领域依赖,由环境提供 -->
+    <!-- servlet -->
     <dependency>
       <groupId>org.apache.tomcat.embed</groupId>
       <artifactId>tomcat-embed-core</artifactId>
+      <scope>provided</scope>
     </dependency>
+    <!-- mybatis -->
     <dependency>
       <groupId>org.mybatis.dynamic-sql</groupId>
       <artifactId>mybatis-dynamic-sql</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 
