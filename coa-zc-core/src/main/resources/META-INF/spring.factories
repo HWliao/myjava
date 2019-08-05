@@ -1,2 +1,3 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.leyoujia.coa.zc.core.tomcat.TomcatAutoConfigure
+com.leyoujia.coa.zc.core.tomcat.TomcatAutoConfigure,\
+com.leyoujia.coa.zc.core.mvc.WebMvcConfig

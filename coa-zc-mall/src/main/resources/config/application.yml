@@ -18,10 +18,13 @@ coa:
       host: 172.16.4.112
       port: 6379
       database: 0
+  mvc:
+    login-interceptor:
+      enable: true
 # log 配置
 logging:
   level:
     root: info
-    com.leyoujia.coa.zc.mall.dao: info
     com.leyoujia.coa.zc.mall.MallApplication: info
     org.springframework.boot.web.embedded.tomcat.TomcatWebServer: info
+    com.leyoujia.coa.zc.core: debug

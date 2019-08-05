@@ -30,19 +30,25 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
+    <!-- devtool -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-devtools</artifactId>
+      <optional>true</optional>
+    </dependency>
     <!-- coa -->
     <dependency>
       <groupId>com.leyoujia.coa.zc</groupId>
       <artifactId>coa-zc-core</artifactId>
     </dependency>
-<!--    <dependency>-->
-<!--      <groupId>com.leyoujia.coa.zc</groupId>-->
-<!--      <artifactId>coa-zc-client</artifactId>-->
-<!--    </dependency>-->
-<!--    <dependency>-->
-<!--      <groupId>com.leyoujia.coa.zc</groupId>-->
-<!--      <artifactId>coa-zc-common</artifactId>-->
-<!--    </dependency>-->
+    <!--    <dependency>-->
+    <!--      <groupId>com.leyoujia.coa.zc</groupId>-->
+    <!--      <artifactId>coa-zc-client</artifactId>-->
+    <!--    </dependency>-->
+    <!--    <dependency>-->
+    <!--      <groupId>com.leyoujia.coa.zc</groupId>-->
+    <!--      <artifactId>coa-zc-common</artifactId>-->
+    <!--    </dependency>-->
 
   </dependencies>
   <build>

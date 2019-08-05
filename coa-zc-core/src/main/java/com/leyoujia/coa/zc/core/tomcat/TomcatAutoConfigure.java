@@ -6,6 +6,7 @@ import org.apache.catalina.Valve;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -23,6 +24,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @ConditionalOnProperty(name = "coa.session.redis.enable")
 @ConditionalOnWebApplication
+@ConditionalOnClass({TomcatServletWebServerFactory.class})
 @Configuration
 @EnableConfigurationProperties(ShareSessionRedisConfig.class)
 public class TomcatAutoConfigure {
