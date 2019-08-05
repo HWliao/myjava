@@ -41,6 +41,11 @@ public class FastjsonHttpMessageConverter implements WebMvcConfigurer {
   public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
     LOG.debug("configureMessageConverters config:{}, converters:{}", this.config, converters);
 
+    if (converters.stream().anyMatch(converter -> converter instanceof FastJsonHttpMessageConverter)) {
+      // 如果已经有了fastjson,既不用加入了
+      return;
+    }
+
     FastJsonHttpMessageConverter fastConverter = new FastJsonHttpMessageConverter();
 
     List<MediaType> types = Lists.newArrayList(MediaType.parseMediaType("application/json;charset=UTF-8"), MediaType.parseMediaType("text/html;charset=UTF-8"));
