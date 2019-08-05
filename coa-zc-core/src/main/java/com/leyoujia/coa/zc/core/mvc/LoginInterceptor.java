@@ -128,11 +128,6 @@ public class LoginInterceptor implements ApplicationContextAware, ServletContext
         }
         return super.preHandle(request, response, handler);
       }
-
-      @Override
-      public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-        LOG.debug("afterCompletion URI:{},ex:{}", request.getRequestURI(), ex);
-      }
     });
   }
 

@@ -23,6 +23,8 @@ coa:
       enable: true
     operator-resolver:
       enable: true
+    http-message-converter:
+      enable: true
 # log 配置
 logging:
   level:

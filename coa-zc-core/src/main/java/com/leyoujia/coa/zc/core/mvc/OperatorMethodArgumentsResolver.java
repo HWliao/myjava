@@ -33,7 +33,6 @@ import static com.leyoujia.coa.zc.core.constant.ComConst.SESSION_OPERATOR;
 @EnableConfigurationProperties(OperatorMethodArgumentsResolverConfig.class)
 public class OperatorMethodArgumentsResolver implements WebMvcConfigurer {
 
-
   @Override
   public void addArgumentResolvers(List<HandlerMethodArgumentResolver> resolvers) {
     resolvers.add(new HandlerMethodArgumentResolver() {

@@ -10,6 +10,10 @@ import org.springframework.context.annotation.Import;
  * @date 2019/8/5
  */
 @Configuration
-@Import({LoginInterceptor.class, OperatorMethodArgumentsResolver.class})
+@Import({
+  LoginInterceptor.class,
+  OperatorMethodArgumentsResolver.class,
+  FastjsonHttpMessageConverter.class
+})
 public class WebMvcConfig {
 }
