@@ -21,6 +21,8 @@ coa:
   mvc:
     login-interceptor:
       enable: true
+    operator-resolver:
+      enable: true
 # log 配置
 logging:
   level:
