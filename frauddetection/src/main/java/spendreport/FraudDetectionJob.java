@@ -27,6 +27,7 @@ import org.apache.flink.walkthrough.common.source.TransactionSource;
 
 /**
  * Skeleton code for the datastream walkthrough
+ *
  * @author HWliao
  */
 public class FraudDetectionJob {
