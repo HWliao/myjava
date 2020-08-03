@@ -65,7 +65,7 @@ demo-api -----|
 [*] maven module依赖关系
 [*] maven 全局依赖管理
 [*] fastjson/guava/common lang/spring boot 依赖引入
-[ ] lombok 引入
+[*] lombok 引入
 [*] banner.tx 更换
 [ ] 多环境多用途配置管理
 [ ] log4j2集成
