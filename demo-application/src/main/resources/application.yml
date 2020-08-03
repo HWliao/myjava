@@ -6,3 +6,8 @@ spring:
     application:
         name: demo
 # 日志
+logging:
+    file:
+        path: /data/logs
+        name: ${spring.application.name}
+    config: classpath:log4j2-spring.xml

@@ -31,13 +31,14 @@
         <java.version>8</java.version>
         <revision>1.0.0</revision>
 
-        <spring.boot.version>2.3.2.RELEASE</spring.boot.version>
         <flatten.plugin.version>1.2.4</flatten.plugin.version>
         <compiler.plugin.version>3.8.1</compiler.plugin.version>
 
+        <spring.boot.version>2.3.2.RELEASE</spring.boot.version>
         <guava.version>29.0-jre</guava.version>
         <common.lang.version>3.11</common.lang.version>
         <fastjson.version>1.2.73</fastjson.version>
+        <disruptor.version>3.4.2</disruptor.version>
     </properties>
 
     <dependencyManagement>
@@ -84,6 +85,23 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
+            </dependency>
+            <!-- log4j2 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>${spring.boot.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>com.lmax</groupId>
+                <artifactId>disruptor</artifactId>
+                <version>${disruptor.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

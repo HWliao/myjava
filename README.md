@@ -64,11 +64,11 @@ demo-api -----|
 [*] 项目基本结构
 [*] maven module依赖关系
 [*] maven 全局依赖管理
-[*] fastjson/guava/common lang/spring boot 依赖引入
+[*] guava/common lang/spring boot 依赖引入
 [*] lombok 引入
 [*] banner.tx 更换
-[ ] 多环境多用途配置管理
-[ ] log4j2集成
+[*] 多环境多用途配置管理
+[*] log4j2集成
 [ ] spring mvc 集成
 [ ] swagger集成/YApi集成/Postman集成
 [ ] spring mvc 登录拦截器(spring security) 部分项目用到
@@ -92,3 +92,11 @@ demo-api -----|
 [ ] 线程池上下文传递
 ```
 #### 功能描述
+##### log4j2说明
+```
+在classpath路径下提供了log4j2-spring.xml和log4j2-local-spring.xml,分别用于服务器环境和本地开发环境,
+主要区别在于本地开发环境只会将log打印在控制台
+启用本地开发环境需要在启动时设置spring.profil.active=local,激活配置文件application-local.yml
+在log4j2-spring.xml中使用了到了一些系统属性,这些系统是spring-boot在启动的时候将applicaiton.yml中logging先关写入到系统属性的,
+否则log42-spring.xml读取不到, 也就是说log4j2是无法直接读取application.yml中的属性的
+```
