@@ -69,26 +69,27 @@ demo-api -----|
 [*] banner.tx 更换
 [*] 多环境多用途配置管理
 [*] log4j2集成
-[ ] spring mvc 集成
-[ ] swagger集成/YApi集成/Postman集成
+[*] spring mvc 集成
+[*] swagger集成/YApi集成/Postman集成
 [ ] spring mvc 登录拦截器(spring security) 部分项目用到
 [ ] spring mvc 统一异常处理
 [ ] spring mvc 业务处理上下文 lang/local/timezone/user/org_code/oc..
+[ ] spring mvc 自定义CORS过滤器
 [ ] 时区转换工具类
 [ ] 数据字典转换工具类
-[ ] 国际化message集成
-[ ] spring mybatis mybatis plus 集成
+[-] 国际化message集成
+[-] spring mybatis mybatis plus 集成
 [ ] spring sharding jdbc 集成
-[ ] spring dubbo 集成
+[-] spring dubbo 集成
 [ ] spring dubbo 业务处理上下文传递 lang/local/timezone/user/org_code/oc..
-[ ] srping redis 集成
-[ ] spring rabbitmq 集成
-[ ] spring rocketmq 集成
+[-] srping redis 集成
+[-] spring rabbitmq 集成
+[-] spring rocketmq 集成
 [ ] spring kafka 集成
-[ ] spring mongodb 集成
+[-] spring mongodb 集成
 [ ] spring elasticsearch 集成
-[ ] spring apollo 集成
-[ ] spring quartz 集成/扩张管理功能
+[-] spring apollo 集成
+[-] spring quartz 集成/扩张管理功能
 [ ] 线程池上下文传递
 ```
 #### 功能描述
@@ -99,4 +100,9 @@ demo-api -----|
 启用本地开发环境需要在启动时设置spring.profil.active=local,激活配置文件application-local.yml
 在log4j2-spring.xml中使用了到了一些系统属性,这些系统是spring-boot在启动的时候将applicaiton.yml中logging先关写入到系统属性的,
 否则log42-spring.xml读取不到, 也就是说log4j2是无法直接读取application.yml中的属性的
+```
+##### swagger集成说明
+```
+1.swagger 目前使用了第三个版本
+2.swagger 集成未对postman进行测试
 ```

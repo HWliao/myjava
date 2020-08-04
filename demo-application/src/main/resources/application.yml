@@ -1,6 +1,10 @@
 # 服务器
 server:
     port: 8080
+# swagger开关
+springfox:
+    documentation:
+        enabled: true
 # spring
 spring:
     application:
@@ -15,7 +19,6 @@ spring:
             date: yyyy-MM-dd
             date-time: yyyy-MM-dd HH:mm:ss
             time: HH:mm:ss
-
 # 日志
 logging:
     file:
