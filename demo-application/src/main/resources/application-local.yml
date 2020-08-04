@@ -21,7 +21,7 @@ apollo:
     # accesskey:
         # secret: edfb7d922556448bbc5453ffc52d7a65
     # 配置缓存位置,使用当前项目中
-    cacheDir: ./apollo-config
+    cacheDir: ./bin/apollo-config
     # 是否在日志之前使用, 开发环境不要使用, 方便看日志
     bootstrap:
         eagerLoad:
