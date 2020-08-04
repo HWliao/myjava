@@ -37,7 +37,6 @@
         <spring.boot.version>2.3.2.RELEASE</spring.boot.version>
         <guava.version>29.0-jre</guava.version>
         <common.lang.version>3.11</common.lang.version>
-        <fastjson.version>1.2.73</fastjson.version>
         <disruptor.version>3.4.2</disruptor.version>
     </properties>
 
@@ -79,12 +78,6 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${common.lang.version}</version>
-            </dependency>
-            <!-- fastjson -->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${fastjson.version}</version>
             </dependency>
             <!-- log4j2 -->
             <dependency>

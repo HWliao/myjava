@@ -5,6 +5,17 @@ server:
 spring:
     application:
         name: demo
+    servlet:
+        multipart:
+            max-file-size: 30MB
+            max-request-size: 50MB
+    mvc:
+        format:
+            # 日期格式
+            date: yyyy-MM-dd
+            date-time: yyyy-MM-dd HH:mm:ss
+            time: HH:mm:ss
+
 # 日志
 logging:
     file:
