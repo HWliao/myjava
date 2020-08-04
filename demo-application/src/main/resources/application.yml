@@ -1,10 +1,6 @@
 # 服务器
 server:
     port: 8080
-# swagger开关
-springfox:
-    documentation:
-        enabled: true
 # spring
 spring:
     application:
@@ -19,9 +15,29 @@ spring:
             date: yyyy-MM-dd
             date-time: yyyy-MM-dd HH:mm:ss
             time: HH:mm:ss
+# apollo 基础配置
+apollo:
+    bootstrap:
+        # will inject 'application' namespace in bootstrap phase
+        enabled: true
+          # put apollo initialization before logging system initialization
+        eagerLoad:
+            enabled: true
+        # will inject 'application' namespaces in bootstrap phase
+        namespaces: application
+# 测试用apollo效果
+demo:
+    local: local
+    # remote: remote
+    override: localOverrride
+    pp: ${demo.remotepp}
+# swagger开关
+springfox:
+    documentation:
+        enabled: true
 # 日志
 logging:
     file:
-        path: /data/logs
+        path: ${log_dir:/data/logs}
         name: ${spring.application.name}
     config: classpath:log4j2-spring.xml

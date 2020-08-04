@@ -1,5 +1,29 @@
+# log4j2
 logging:
+    # 本地加载的日志配置文件
     config: classpath:log4j2-local-spring.xml
+# swagger
 springfox:
     documentation:
         enabled: true
+# apollo 启动先关配置 其他环境在命令行中指定 仅仅本地开发有用
+app:
+    # apollo应用id
+    id: demo-1
+# apollo 相关配置还有一个/opt/settings/server.properties 无法直接通过配置文件配置内部参数,但是可以通过java启动参数配置
+# env=DEV 配置激活的环境,可以设置未env=Local
+apollo:
+    # 指定直连配置服务器,开发时可以使用
+    # configService: http://192.168.31.48:18080
+    # apollo meta server地址
+    meta: http://192.168.31.48:18080
+    # 密钥开发环境未设置成功,原因未知
+    # accesskey:
+        # secret: edfb7d922556448bbc5453ffc52d7a65
+    # 配置缓存位置,使用当前项目中
+    cacheDir: ./apollo-config
+    # 是否在日志之前使用, 开发环境不要使用, 方便看日志
+    bootstrap:
+        eagerLoad:
+            enabled: false
+
