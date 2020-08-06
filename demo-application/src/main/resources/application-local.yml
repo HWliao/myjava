@@ -2,6 +2,16 @@
 logging:
     # 本地加载的日志配置文件
     config: classpath:log4j2-local-spring.xml
+#
+spring:
+    # DataSource Config
+    datasource:
+        driver-class-name: org.h2.Driver
+        schema: classpath:db/schema-h2.sql
+        data: classpath:db/data-h2.sql
+        url: jdbc:h2:mem:test
+        username: root
+        password: test
 # swagger
 springfox:
     documentation:

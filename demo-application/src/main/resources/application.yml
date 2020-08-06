@@ -20,7 +20,7 @@ apollo:
     bootstrap:
         # will inject 'application' namespace in bootstrap phase
         enabled: true
-          # put apollo initialization before logging system initialization
+        # put apollo initialization before logging system initialization
         eagerLoad:
             enabled: true
         # will inject 'application' namespaces in bootstrap phase
@@ -30,7 +30,7 @@ demo:
     local: local
     # remote: remote
     override: localOverrride
-    pp: ${demo.remotepp}
+    pp: ${demo.remotepp:}
 # swagger开关
 springfox:
     documentation:

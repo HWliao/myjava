@@ -13,13 +13,13 @@ import javax.annotation.PostConstruct;
 @Service
 public class ConfigTestService {
 
-    @Value("${demo.local}")
+    @Value("${demo.local:}")
     private String local;
-    @Value("${demo.remote}")
+    @Value("${demo.remote:}")
     private String remote;
-    @Value("${demo.override}")
+    @Value("${demo.override:}")
     private String override;
-    @Value("${demo.pp}")
+    @Value("${demo.pp:}")
     private String remotepp;
 
     @PostConstruct
