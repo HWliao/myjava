@@ -4,8 +4,8 @@ root = true
 [*]
 #缩进风格：空格
 indent_style = space
-#缩进大小4
-indent_size = 2
+#缩进大小2
+indent_size = 4
 #换行符lf
 end_of_line = lf
 #字符集utf-8
@@ -16,5 +16,4 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 
 [*.md]
-insert_final_newline = false
 trim_trailing_whitespace = false
